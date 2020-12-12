@@ -34,6 +34,7 @@ for vid, vtitle in itemList:
     print('Downloading video', count, '/', itemCounts , ':', vid, '/',vtitle,'...')
     try:
         yt = pytube.YouTube(itemurl)
+        yt.streams.first().download()
         mp4 = VideoFileClip(vtitle+'.mp4')
         mp4.audio.write_audiofile(vtitle+'.mp3')
         os.remove(vtitle+'.mp4')
