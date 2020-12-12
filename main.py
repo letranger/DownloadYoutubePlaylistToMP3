@@ -26,7 +26,7 @@ print("==================================")
 print(itemCounts," videos found.")
 print("==================================")
 count = 0
-videoSubFolder = './Video'
+
 from pytube import YouTube
 for vid, vtitle in itemList:
     count = count + 1
